@@ -18,7 +18,6 @@ class ParseAPIAgent:
             Your task is to analyze JSON responses from the Superhero API and extract the information needed to create HeroModel objects.
 
             The HeroModel structure requires:
-            - id: integer (use 0 if not available in API response)
             - name: string (the hero's name)
             - real_name: string (the hero's real name/alias, can be empty string if not found)
             - universe: string (must be either "Marvel" or "DC comics")
@@ -46,12 +45,10 @@ class ParseAPIAgent:
             - If publisher contains "Marvel" → universe = "Marvel"
             - If publisher contains "DC" → universe = "DC comics"
             - Default to "Marvel" if publisher is unclear
-            4. Set id to 0 (API doesn't provide IDs)
 
             Output Format:
             Return a JSON array of HeroModel objects. Each object should have:
             {
-            "id": 0,
             "name": "...",
             "real name": "...",  // Note: use "real name" (with space) as the key
             "universe": "Marvel" or "DC comics"

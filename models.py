@@ -1,7 +1,6 @@
 from pydantic import BaseModel, Field
 
 class HeroModel(BaseModel):
-    id: int
     name: str
     real_name: str = Field(default="", serialization_alias="real name")
     universe: str

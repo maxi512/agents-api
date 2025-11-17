@@ -26,7 +26,6 @@ def execute_sql(sql: str) -> List[Dict[str, Any]]:
         heroes = []
         for row in rows:
             hero_model = HeroModel(
-                id=row['id'],
                 name=row['name'],
                 real_name=row['alias'] or "",
                 universe=row['universe']
